@@ -20,6 +20,9 @@ const customPalettes = {
   brand: generatePalette('#0833a2')
 }
 
+const customDropdown = {
+  red: generatePalette('#BD0C2E')
+}
 /**
  * Themes
  */
@@ -42,6 +45,10 @@ const themes = {
     'on-warn': {
       500: colors.red['50'],
       DEFAULT:'#948E8C'
+    },
+    dropdown:{
+      ...customDropdown.red,
+
     }
   },
   // Rest of the themes will use the 'default' as the base theme
