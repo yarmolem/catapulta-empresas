@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputName = ({ labelName }) => {
+const InputName = ({ labelName, placeholder = 'hola' }) => {
     return (
         <div className="my-3 mx-1">
             <div>
@@ -14,12 +14,13 @@ const InputName = ({ labelName }) => {
 
             <input
                 className=" w-full border border-accent text-on-warn outline-none
-                py-2 pl-4  focus:ring-2  focus:border-accent-500
+                py-2 pl-4  focus:ring-2  
                 focus:ring-2 focus:ring-accent focus:border-accent-500"
                 name="name"
                 type="text"
                 id="name"
-                
+                placeholder={placeholder}
+
             />
 
         </div>
