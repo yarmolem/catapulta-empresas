@@ -23,6 +23,10 @@ const customPalettes = {
 const customDropdown = {
   red: generatePalette('#BD0C2E')
 }
+
+const customTurquoise = {
+  turquoise: generatePalette('#00AEC6')
+}
 /**
  * Themes
  */
@@ -47,8 +51,10 @@ const themes = {
       DEFAULT:'#948E8C'
     },
     dropdown:{
-      ...customDropdown.red,
-
+      ...customDropdown.red
+    },
+    turquoise:{
+      ...customTurquoise.turquoise
     }
   },
   // Rest of the themes will use the 'default' as the base theme

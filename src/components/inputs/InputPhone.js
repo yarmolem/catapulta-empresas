@@ -1,7 +1,9 @@
 import React from 'react'
+
 import b_peru from '../../assets/imgs/Group 99.jpg'
 import icono_select from '../../assets/imgs/Layer 2.svg'
 const InputPhone = () => {
+
 
     return (
         <div className="relative my-3 mx-1 ">
