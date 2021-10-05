@@ -5,7 +5,7 @@ import InputName from '../../components/inputs/InputName'
 /* import { MenuIcon } from '../../icons' */
 /* import { AlertForgotPassword } from '../../components/Alert/index'
  */
-const Login = ({ setisAuth }) => {
+const Login = () => {
   return (
     <div className="h-screen flex">
       <img
@@ -34,7 +34,7 @@ const Login = ({ setisAuth }) => {
                 type="submit"
                 className="w-full sm:w-56 sm:mx-auto bg-orange-700 text-white px-4 font-semibold py-1 rounded-lg mt-4 outline-none disabled:opacity-50"
                 disabled={true}
-                onClick={() => { setisAuth(true) }}
+                
               >
                 Iniciar Sesión
               </button>
