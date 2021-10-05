@@ -1,11 +1,24 @@
 import logo from '../../assets/imgs/logo.svg'
 import imagenLogin from '../../assets/imgs/imagen-login.png'
 import InputName from '../../components/inputs/InputName'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/auth/AuthState'
 // import ForgotPassword from '../../components/ForgotPassword'
 /* import { MenuIcon } from '../../icons' */
 /* import { AlertForgotPassword } from '../../components/Alert/index'
  */
 const Login = () => {
+  const { loginAction } = useContext(AuthContext)
+
+  const handleLogin = (e) => {
+    e.preventDefault()
+    loginAction({
+      user: 'asdaw',
+      email: 'asdads',
+      rol: 'asdaw'
+    })
+  }
+
   return (
     <div className="h-screen flex">
       <img
@@ -19,7 +32,7 @@ const Login = () => {
           {/*  <MenuIcon className="text-blue-300" /> */}
           {/* <ForgotPassword /> */}
           {/* <AlertForgotPassword /> */}
-          <form className="w-64 sm:w-80" action="">
+          <form className="w-64 sm:w-80" onSubmit={handleLogin}>
             <div className="flex flex-col">
               <InputName label="Usuario" className="mb-4" />
               <InputName label="Contraseña" type="password" />
@@ -33,8 +46,6 @@ const Login = () => {
               <button
                 type="submit"
                 className="w-full sm:w-56 sm:mx-auto bg-orange-700 text-white px-4 font-semibold py-1 rounded-lg mt-4 outline-none disabled:opacity-50"
-                disabled={true}
-                
               >
                 Iniciar Sesión
               </button>

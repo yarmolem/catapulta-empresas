@@ -1,34 +1,50 @@
-import React, { useContext } from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
-import App from '../App';
-import { AuthContext } from '../context/auth/AuthState';
-import Dashboard from '../pages/layout/Dashboard';
-import Login from '../pages/login/Login';
+import React, { useContext, useEffect } from 'react'
+import { Route, Switch, useHistory } from 'react-router-dom'
 
+import App from '../App'
+import Login from '../pages/login/Login'
+import Dashboard from '../pages/layout/Dashboard'
+import { AuthContext } from '../context/auth/AuthState'
 
+// Sistema de rutas principales
 
+const HomeRoutes = () => {
+  return (
+    <>
+      <Route exact path="/" component={App} />
+      <Route exact path="/dashboard" component={Dashboard} />
+    </>
+  )
+}
 
-
-//sistema de rutas principales
+const AuthRoutes = () => {
+  return (
+    <>
+      <Route exact path="/auth/login" component={Login} />
+    </>
+  )
+}
 
 const AppRouter = () => {
-    const pepe =useContext(AuthContext);
-    console.log(pepe);
-    return (
-        <Router>
-            <div>
-                <Switch>
-                    <Route exact path="/" component={Login} /> 
-                    <Route exact path="/componentes" component={App}/>
-                    <Route exact path="/dashboard" component={Dashboard}/>               
-                </Switch>
-            </div>
-        </Router>
-    )
+  const history = useHistory()
+  const { user } = useContext(AuthContext)
+  const isAuth = user.trim() !== ''
+
+  console.log(history)
+
+  useEffect(() => {
+    if (isAuth) {
+      history.push('/')
+    } else {
+      history.push('/auth/login')
+    }
+  }, [isAuth])
+
+  return (
+    <div>
+      <Switch>{isAuth ? HomeRoutes() : AuthRoutes()}</Switch>
+    </div>
+  )
 }
 
 export default AppRouter
