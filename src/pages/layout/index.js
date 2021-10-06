@@ -1,12 +1,16 @@
 import Sidebar from '../../components/Sidebar'
 import Header from '../../components/Header'
-const Dashboard = () => {
+
+const Layout = ({ children }) => {
   return (
     <div className="flex">
       <Sidebar />
-      <Header />
+      <div>
+        <Header />
+        {children}
+      </div>
     </div>
   )
 }
 
-export default Dashboard
+export default Layout

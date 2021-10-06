@@ -8,7 +8,7 @@ import icon_usersPhoto from '../../assets/imgs/userPhoto-p.svg'
 import icon_usersWithoutPhoto from '../../assets/imgs/usersWithoutPhoto.svg'
 import icon_reconocimientos from '../../assets/imgs/reconocimientos.svg'
 import grafica from '../../assets/imgs/img-grafica.PNG'
-import Sidebar from '../../components/Sidebar'
+// import Sidebar from '../../components/Sidebar'
 import SelectDate from '../../components/inputs/SelectDate'
 import { ButtonDownload } from '../../components/Button'
 
@@ -18,9 +18,9 @@ const DashboardVista1 = () => {
     return (
         <div className="flex">
 
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
                 <Sidebar />
-            </div>
+            </div> */}
             <div className="w-full md:px-7 border">
                 <div className="relative banner mb-5 md:mb-11">
                     <div className="text-white bg-black opacity-50 absolute left-0 bottom-0 right-0 top-0">
