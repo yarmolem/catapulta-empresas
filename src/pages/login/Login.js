@@ -9,12 +9,13 @@ import { AuthContext } from '../../context/auth/AuthState'
  */
 const Login = () => {
   const { loginAction } = useContext(AuthContext)
-
+  
   const handleLogin = (e) => {
     e.preventDefault()
+    localStorage.setItem('user', JSON.stringify({user: 'Percy',}))
     loginAction({
-      user: 'asdaw',
-      email: 'asdads',
+      user: 'Percy',
+      email: 'cordova@gmail.com',
       rol: 'asdaw'
     })
   }

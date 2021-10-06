@@ -1,5 +1,6 @@
 // const path = require('path')
 const process = require('process')
+const { blueGray } = require('tailwindcss/colors')
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 // const plugin = require('tailwindcss/plugin')
@@ -27,6 +28,15 @@ const customDropdown = {
 const customTurquoise = {
   turquoise: generatePalette('#00AEC6')
 }
+const customPurple = {
+  purple: generatePalette('#A5037C'),
+}
+const customBrown = {
+  brown: generatePalette('#79321B'),
+}
+const customOrange = {
+  orange: generatePalette('#FF8A00')
+}
 /**
  * Themes
  */
@@ -44,17 +54,26 @@ const themes = {
     },
     warn: {
       ...colors.red,
-      DEFAULT:'#FBB450'
+      DEFAULT: '#FBB450'
     },
     'on-warn': {
       500: colors.red['50'],
-      DEFAULT:'#948E8C'
+      DEFAULT: '#948E8C'
     },
-    dropdown:{
+    dropdown: {
       ...customDropdown.red
     },
-    turquoise:{
+    turquoise: {
       ...customTurquoise.turquoise
+    },
+    purple: {
+      ...customPurple.purple
+    },
+    brown: {
+      ...customBrown.brown
+    },
+    orange: {
+      ...customOrange.orange
     }
   },
   // Rest of the themes will use the 'default' as the base theme
@@ -101,10 +120,22 @@ const config = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      pink: colors.pink,
-      gray: colors.blueGray,
+      pink: {
+        ...colors.pink,
+        600: '#A5037C'
+      },
+
+      gray: {
+        ...colors.blueGray,
+        100: '#948E8C',
+        200: '#757575'
+      },
       red: colors.red,
-      orange: colors.orange,
+      orange: {
+        ...colors.orange,
+        500: '#FBB450',
+        700: '#F26935'
+      },
       amber: colors.amber,
       yellow: colors.yellow,
       green: {
@@ -461,7 +492,7 @@ const config = {
     placeholderOpacity: false,
     verticalAlign: false
   },
- 
+
   plugins: [
     // // Fuse - Tailwind plugins
     // require(path.resolve(

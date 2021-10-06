@@ -8,7 +8,15 @@ export const ButtonOffice = ({ office /* = excel */ }) => {
   )
 }
 
-export const ButtonDownload = ({ customClass = '', text = 'Descargar', width = '', color = '', border = '', outline = false }) => {
+export const ButtonDownload = ({ 
+  customClass = '',
+  text = 'Descargar',
+  width = '',
+  color = '',
+  border = '',
+  outline = false,
+  
+}) => {
   if (width === 'small') {
     if (outline === true) {
       return (

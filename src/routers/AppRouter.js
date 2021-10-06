@@ -1,18 +1,26 @@
-import React, { useContext, useEffect } from 'react'
+import React, {  useContext, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 
 import App from '../App'
 import Login from '../pages/login/Login'
-import Dashboard from '../pages/layout/Dashboard'
+//import Dashboard from '../pages/layout/Dashboard'
 import { AuthContext } from '../context/auth/AuthState'
+import DashboardVista1 from '../pages/Dashboard/DashboardVista1'
+import Profile from '../pages/profile/Profile'
+import ProfilePageTwo from '../pages/profile/ProfilePageTwo'
+
 
 // Sistema de rutas principales
 
 const HomeRoutes = () => {
+
   return (
     <>
-      <Route exact path="/" component={App} />
-      <Route exact path="/dashboard" component={Dashboard} />
+      
+      <Route exact path="/" component={DashboardVista1} />
+      <Route exact path="/componentes" component={App} />
+      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/profilePageTwo" component={ProfilePageTwo} />
     </>
   )
 }
@@ -28,9 +36,9 @@ const AuthRoutes = () => {
 const AppRouter = () => {
   const history = useHistory()
   const { user } = useContext(AuthContext)
-  const isAuth = user.trim() !== ''
+  const isAuth = JSON.parse(localStorage.getItem('user'))|| user.trim() !== ''
 
-  console.log(history)
+  
 
   useEffect(() => {
     if (isAuth) {

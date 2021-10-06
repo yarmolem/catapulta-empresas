@@ -10,6 +10,7 @@ import InputCheck from "./components/inputs/InputCheck"
 import InputUploadImagePerfil from "./components/inputs/InputUploadImagePerfil"
 import { useContext } from "react"
 import { AuthContext } from "./context/auth/AuthState"
+import Card from "./components/Card"
 
 
 const App = () => {
@@ -37,6 +38,8 @@ console.log("pepe devuelve",pepe);
       <DropdonwnTipo1 title="Votaciones" content="fjkhfjhwejfhewkfwekhkwehekwlfhweklfhweflkhekwl" />
       <InputCheck name="js" id="js" textLabel="JAVASCRIPT" />
       <InputUploadImagePerfil />
+      <Card/>
+
     </div>
 
 

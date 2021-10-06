@@ -15,7 +15,7 @@ import iconNews from '../../assets/imgs/icon-news.svg'
 //   }
 // ]
 
-const index = () => {
+const Sidebar= () => {
   return (
     <div className="w-full sm:w-44 h-screen flex flex-col border-r border-gray-400 shadow-xl">
       <img className="sm:w-4/5 my-8 self-center" src={logo}></img>
@@ -51,4 +51,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Sidebar
