@@ -11,12 +11,14 @@ import grafica from '../../assets/imgs/img-grafica.PNG'
 // import Sidebar from '../../components/Sidebar'
 import SelectDate from '../../components/inputs/SelectDate'
 import { ButtonDownload } from '../../components/Button'
+//import DropdonwnTipo2 from '../../components/dropdown/DropdonwnTipo2'
+import DropdonwnTipo1 from '../../components/dropdown/DropdonwnTipo1'
 
 const DashboardVista1 = () => {
     const filterList = ["Edad", "Año", "XXXXXXXX"];
 
     return (
-        <div className="flex mt-6">
+        <div className="flex mt-6 content-general">
 
             {/* <div className="hidden md:block">
                 <Sidebar />
@@ -83,7 +85,7 @@ const DashboardVista1 = () => {
                         <img src={grafica} />
                     </div>
 
-                    
+
                     <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
                         <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
                         <p className="ml-1">Frecuencia</p>
@@ -104,7 +106,55 @@ const DashboardVista1 = () => {
                         </div>
 
                     </div>
+                </div>
+                <div>
+                    <DropdonwnTipo1 title="Votaciones">
+                        <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                            <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                            <p className="ml-1">Fecha</p>
+                            <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
+                            <p className="ml-1">Área</p>
+                            <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
+                            <div className="mt-5 flex justify-center">
+                                <ButtonDownload
+                                    customClass=''
+                                    text='Generar Reporte'
+                                    width="large"
+                                    color='dropdown'
+                                    border='drpdown'
+                                    outline={false}
+                                />
+                            </div>
 
+                        </div>
+                    </DropdonwnTipo1>
+                    <DropdonwnTipo1 title="Red Social">
+                        <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                            <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                            <p className="ml-1">Tipo</p>
+                            <SelectDate dateList={filterList} titleSelect="Filtrar" name="frecuencia" />
+                            <p className="ml-1">Fecha</p>
+                            <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
+                            <p className="ml-1">Área</p>
+                            <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
+                            <div className="mt-5 flex justify-center">
+                                <ButtonDownload
+                                    customClass=''
+                                    text='Generar Reporte'
+                                    width="large"
+                                    color='dropdown'
+                                    border='drpdown'
+                                    outline={false}
+                                />
+                            </div>
+
+                        </div>
+                    </DropdonwnTipo1>
+                    <div className="bg-dropdown rounded-xl w-full 
+                                  text-white font-bold text-lg px-10 py-5">
+                      Beneficios
+                    </div>
+                    <input type="date" id="fecha" name="fecha" required="required" /> fecha
                 </div>
             </div>
         </div>

@@ -35,7 +35,9 @@ console.log("pepe devuelve",pepe);
       <InputUploadImage />
       <InputTextArea />
       <DropdonwnTipo2 filterList={filterList} />
-      <DropdonwnTipo1 title="Votaciones" content="fjkhfjhwejfhewkfwekhkwehekwlfhweklfhweflkhekwl" />
+      <DropdonwnTipo1 title="Votaciones">
+        <h4>HOLA</h4>
+      </DropdonwnTipo1>
       <InputCheck name="js" id="js" textLabel="JAVASCRIPT" />
       <InputUploadImagePerfil />
       <Card/>

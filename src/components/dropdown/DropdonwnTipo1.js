@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import vector from '../../assets/imgs/Vector.svg'
-const DropdonwnTipo1 = ({ title, content }) => {
+const DropdonwnTipo1 = ({ title, children }) => {
     const [show, setShow] = useState(false);
     const handleShow=()=>{
         setShow(e=>!e);
@@ -16,8 +16,8 @@ const DropdonwnTipo1 = ({ title, content }) => {
                     onClick={handleShow}
                     />
             </div>
-            {(show) && <div className={` bg-accent-400 text-white px-10 py-5`}>
-                {content}
+            {(show) && <div className={`flex justify-center item-center pt-7 pb-12`}>
+                {children}
             </div>}
         </div>
     )

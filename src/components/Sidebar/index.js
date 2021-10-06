@@ -43,7 +43,7 @@ const Sidebar = ({show,handleClick}) => {
             </li>
           ))} */}
           <li className=" pl-2 py-3 md:rounded-l-full bg-gray-100 ">
-            <Link to='/profile' 
+            <Link to='/dashboard' 
             className="flex  items-center "
             onClick={()=>handleClick()}
             >
@@ -52,12 +52,24 @@ const Sidebar = ({show,handleClick}) => {
             </Link>
           </li>
           <li className="flex  items-center  pl-2 py-3">
+            <Link to='/profile' 
+            className="flex  items-center "
+            onClick={()=>handleClick()}>
             <img className="" src={iconProfile}></img>
             <span className="text-2xl sm:text-base ml-3">Perfil General</span>
+            </Link>
+            
           </li>
           <li className="flex  items-center  pl-2 py-3">
+            <Link to='/components' 
+            className="flex  items-center "
+            onClick={()=>handleClick()}
+            
+            >
             <img className="" src={iconCompanies}></img>
             <span className="text-2xl sm:text-base ml-2">BD Empresas</span>
+            </Link>
+            
           </li>
           <li className="flex  items-center  pl-2 py-3   ">
             <img className="" src={iconNews}></img>

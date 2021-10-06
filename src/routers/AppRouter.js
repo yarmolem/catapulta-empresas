@@ -7,6 +7,7 @@ import Profile from '../pages/profile/Profile'
 import { AuthContext } from '../context/auth/AuthState'
 import ProfilePageTwo from '../pages/profile/ProfilePageTwo'
 import DashboardVista1 from '../pages/Dashboard/DashboardVista1'
+import App from '../App'
 
 // Sistema de rutas principales
 
@@ -14,9 +15,10 @@ const HomeRoutes = () => {
   return (
     <Layout>
       <Switch>
-        <Route exact path="/" component={DashboardVista1} />
+        <Route exact path="/dashboard" component={DashboardVista1} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/profilePageTwo" component={ProfilePageTwo} />
+        <Route exact path="/components" component={App}/>
       </Switch>
     </Layout>
   )
