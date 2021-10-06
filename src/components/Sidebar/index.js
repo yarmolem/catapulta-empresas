@@ -3,6 +3,7 @@ import iconDashboard from '../../assets/imgs/icon-dashboard.svg'
 import iconProfile from '../../assets/imgs/icon-profile.svg'
 import iconCompanies from '../../assets/imgs/icon-companies.svg'
 import iconNews from '../../assets/imgs/icon-news.svg'
+import { Link } from 'react-router-dom'
 
 // const links = [
 //   {
@@ -28,8 +29,10 @@ const Sidebar= () => {
             </li>
           ))} */}
           <li className="flex  items-center  pl-2 py-3 rounded-l-full bg-gray-100">
+            <Link to='/profile'>
             <img className="" src={iconDashboard}></img>
             <span className="text-2xl sm:text-base ml-2">Dashboard</span>
+            </Link>
           </li>
           <li className="flex  items-center  pl-2 py-3">
             <img className="" src={iconProfile}></img>
