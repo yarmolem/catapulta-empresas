@@ -1,13 +1,14 @@
 /* import logo from '../../assets/imgs/logo.svg' */
-import { UserSolidIcon, MenuIcon } from '../../assets/icons'
+import { UserSolidIcon } from '../../assets/icons'
+import logo from '../../assets/imgs/logo.svg'
 const index = () => {
   return (
-    <div className="flex-1 h-22 flex  w-full items-center justify-between px-6 border-b shadow-lg">
-      <MenuIcon className="text-orange-700" />
-      <div className="flex gap-2 ">
-        {/*  <img className="w-32" src={logo} /> */}
-        <UserSolidIcon className="text-orange-700" />
-      </div>
+    <div className=" h-22 flex  w-full justify-between items-center md:justify-end  
+                     px-6 bg-white border-b shadow-lg">
+      <img src={logo} className="w-40 md:hidden"/>
+    
+      <UserSolidIcon className="text-orange-700" />
+      
     </div>
   )
 }

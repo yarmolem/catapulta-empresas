@@ -1,7 +1,6 @@
 import React, {  useContext, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-
-import App from '../App'
+//import App from '../App'
 import Layout from '../pages/layout'
 import Login from '../pages/login/Login'
 import Profile from '../pages/profile/Profile'
@@ -16,7 +15,6 @@ const HomeRoutes = () => {
     <Layout>
       <Switch>
         <Route exact path="/" component={DashboardVista1} />
-        <Route exact path="/componentes" component={App} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/profilePageTwo" component={ProfilePageTwo} />
       </Switch>

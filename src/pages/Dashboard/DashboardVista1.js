@@ -16,12 +16,12 @@ const DashboardVista1 = () => {
     const filterList = ["Edad", "Año", "XXXXXXXX"];
 
     return (
-        <div className="flex">
+        <div className="flex mt-6">
 
             {/* <div className="hidden md:block">
                 <Sidebar />
             </div> */}
-            <div className="w-full md:px-7 border">
+            <div className="w-full md:px-7 ">
                 <div className="relative banner mb-5 md:mb-11">
                     <div className="text-white bg-black opacity-50 absolute left-0 bottom-0 right-0 top-0">
                     </div>
