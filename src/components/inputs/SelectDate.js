@@ -18,10 +18,11 @@ const SelectDate = ({ dateList,titleSelect,name }) => {
                 {
                     dateList.map(date =>
                         <option
+                            className="text-dropdown border text-center"
                             value={date}
                             key={date}
                         >
-                            {date}
+                           {date} 
                         </option>
                     )
                 }
