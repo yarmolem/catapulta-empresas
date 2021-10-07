@@ -5,9 +5,10 @@ import Layout from '../pages/layout'
 import Login from '../pages/login/Login'
 import Profile from '../pages/profile/Profile'
 import { AuthContext } from '../context/auth/AuthState'
-import ProfilePageTwo from '../pages/profile/ProfilePageTwo'
+//import ProfilePageTwo from '../pages/profile/ProfilePageTwo'
 import DashboardVista1 from '../pages/Dashboard/DashboardVista1'
 import App from '../App'
+import AwardView1 from '../pages/award management/AwardView1'
 
 // Sistema de rutas principales
 
@@ -17,7 +18,7 @@ const HomeRoutes = () => {
       <Switch>
         <Route exact path="/" component={DashboardVista1} />
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/profilePageTwo" component={ProfilePageTwo} />
+        <Route exact path="/premiaciones" component={AwardView1} />
         <Route exact path="/components" component={App}/>
       </Switch>
     </Layout>

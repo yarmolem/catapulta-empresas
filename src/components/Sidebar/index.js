@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom'
 //   }
 // ]
 
-const Sidebar = ({show,handleClick}) => {
+const Sidebar = ({ show, handleClick }) => {
 
 
 
@@ -34,10 +34,10 @@ const Sidebar = ({show,handleClick}) => {
   return (
     <div className={`w-full  md:w-52 h-screen flex flex-col border-r border-gray-400 shadow-xl 
        hidde md:sticky md:top-0 
-       absolute top-22 z-10 bg-white min-h-full text-accent
-       ${show&&"hidden"}
+       absolute top-24 z-10 bg-white min-h-full text-accent
+       ${show && "hidden"}
     `}>
-      <img className="sm:w-4/5 my-8 self-center " src={logo}></img>
+      <img className="sm:w-4/5 my-8 self-center hidden md:block" src={logo}></img>
       <nav className="text-base font-semibold w-full">
         <ul className="flex flex-col md:pl-2  ">
           {/* {links.map(({ url, name }) => (
@@ -47,9 +47,9 @@ const Sidebar = ({show,handleClick}) => {
             </li>
           ))} */}
           <li className=" pl-1 py-3 pmd:rounded-l-full pbg-gray-100  ">
-            <Link to='/' 
-            className="flex  items-center "
-            onClick={()=>handleClick()}
+            <Link to='/'
+              className="flex  items-center "
+              onClick={() => handleClick()}
             >
               <img className="" src={iconDashboard}></img>
               <span className="text-2xl sm:text-base ml-2  text-whites">Dashboard</span>
@@ -57,32 +57,38 @@ const Sidebar = ({show,handleClick}) => {
           </li>
 
           <li className="flex  items-center  pl-1 py-3 ">
-            <Link to='/profile' 
-            className="flex  items-center "
-            onClick={()=>handleClick()}>
-            <img className="" src={iconBd}></img>
-            <span className=" text-2xl sm:text-base ml-2">BD Administrador</span>
+            <Link to='/profile'
+              className="flex  items-center "
+              onClick={() => handleClick()}>
+              <img className="" src={iconBd}></img>
+              <span className=" text-2xl sm:text-base ml-2">BD Administrador</span>
             </Link>
-            
+
           </li>
 
           <li className="flex  items-center  pl-1 py-3 ">
-            <Link to='/components' 
-            className="flex  items-center "
-            onClick={()=>handleClick()}
-            
+            <Link to='/components'
+              className="flex  items-center "
+              onClick={() => handleClick()}
+
             >
-            <img className="" src={iconEmpleados}></img>
-            <span className="text-2xl sm:text-base ml-2">BD Empleados</span>
+              <img className="" src={iconEmpleados}></img>
+              <span className="text-2xl sm:text-base ml-2">BD Empleados</span>
             </Link>
-            
+
           </li>
 
           <li className="flex  items-center  pl-1 py-3   ">
-            <img className="" src={iconPremiaciones}></img>
-            <span className="text-2xl sm:text-base ml-2">
-              Gestión de Premiaciones
-            </span>
+            <Link to='/premiaciones'
+              className="flex  items-center "
+              onClick={() => handleClick()}
+            >
+              <img className="" src={iconPremiaciones}></img>
+              <span className="text-2xl sm:text-base ml-2">
+                Gestión de Premiaciones
+              </span>
+            </Link>
+
           </li>
 
           <li className="flex  items-center  pl-1 py-3   ">

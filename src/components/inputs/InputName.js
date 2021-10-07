@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputName = ({ labelName, placeholder = 'hola' }) => {
+const InputName = ({ labelName, placeholder = '' }) => {
     return (
         <div className="my-3 mx-1">
             <div>

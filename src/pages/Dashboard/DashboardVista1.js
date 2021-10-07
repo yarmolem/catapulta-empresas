@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '../../components/Card'
 import banner from '../../assets/imgs/bannerUser-p.png'
 import icon_equipo from '../../assets/imgs/equipo 1-p.svg'
@@ -15,10 +15,13 @@ import { ButtonDownload } from '../../components/Button'
 //import DropdonwnTipo2 from '../../components/dropdown/DropdonwnTipo2'
 import DropdonwnTipo1 from '../../components/dropdown/DropdonwnTipo1'
 import CouponCards from '../../components/CouponCards/CouponCards'
+import { AuthContext } from '../../context/auth/AuthState'
 
 const DashboardVista1 = () => {
+    const { user } = useContext(AuthContext);
     const filterList = ["Edad", "Año", "XXXXXXXX"];
-    const frecuencia = ["Días", "Semanas", "Meses"]
+    const frecuencia = ["Días", "Semanas", "Meses"];
+    
     return (
         <div className="flex mt-6 content-general">
 
@@ -33,12 +36,12 @@ const DashboardVista1 = () => {
                         <img src={banner} className="md:h-48 h-30 w-full" />
                     </div>
                     <p className="text-3xl md:text-4xl  top-1/3 left-5 md:left-12 text-white absolute">
-                        Bienvenid@, luis fernando
+                        Bienvenid@, {user}
                     </p>
 
                 </div>
 
-                <div className="cards  flex flex-wrap flex-col items-center mx-1 lg:mx-0 sm:flex-row justify-between  ">
+                <div className="cards items-stretch  flex flex-wrap flex-col items-center mx-1 lg:mx-0 sm:flex-row justify-between  ">
                     <Card
                         icon={icon_equipo}
                         number={124}

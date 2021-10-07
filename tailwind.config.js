@@ -1,7 +1,11 @@
 // const path = require('path')
+// eslint-disable-next-line no-undef
 const process = require('process')
+// eslint-disable-next-line no-undef
 const { blueGray } = require('tailwindcss/colors')
+// eslint-disable-next-line no-undef
 const colors = require('tailwindcss/colors')
+// eslint-disable-next-line no-undef
 const defaultTheme = require('tailwindcss/defaultTheme')
 // const plugin = require('tailwindcss/plugin')
 // const generatePalette = require(path.resolve(
@@ -9,6 +13,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 //   'src/@fuse/tailwind/utils/generate-palette'
 // ))
 
+// eslint-disable-next-line no-undef
 const generatePalette = require('./src/@tailwind/utils/generate-palette')
 
 /**
@@ -130,7 +135,11 @@ const config = {
         100: '#948E8C',
         200: '#757575'
       },
-      red: colors.red,
+      red: {
+        ...colors.red,
+        400:'rgba(254, 7, 19, 0.1)',
+        500:'#FE0713',
+          },
       orange: {
         ...colors.orange,
         500: '#FBB450',
@@ -241,6 +250,7 @@ const config = {
 
         // Bigger values
         100: '25rem',
+        119: '29rem',
         120: '30rem',
         128: '32rem',
         140: '35rem',
@@ -507,6 +517,7 @@ const config = {
     //     __dirname,
     //     'src/@fuse/tailwind/plugins/icon-size'
     // )),
+    // eslint-disable-next-line no-undef
     require('./src/@tailwind/plugins/theming')({
       themes
     })
@@ -520,4 +531,5 @@ const config = {
   ]
 }
 
+// eslint-disable-next-line no-undef
 module.exports = config

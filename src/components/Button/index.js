@@ -75,7 +75,7 @@ export const ButtonDownload = ({
       return (
         <button className={`${customClass}  bg-${color} px-8 py-2 tracking-wide text-white 
           border-${border} border-${color} rounded-md text-center  
-          flex algin-center justify-center font-medium text-base cursor-pointer`}>
+          flex algin-center justify-center font-medium text-base cursor-pointer `}>
           {text}
         </button>
       )

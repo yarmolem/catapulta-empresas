@@ -12,9 +12,9 @@ const Login = () => {
   
   const handleLogin = (e) => {
     e.preventDefault()
-    localStorage.setItem('user', JSON.stringify({user: 'Percy',}))
+    //localStorage.setItem('user', JSON.stringify({user: 'Percy',}))
     loginAction({
-      user: 'Percy',
+      user: 'Percy Córdova',
       email: 'cordova@gmail.com',
       rol: 'asdaw'
     })
@@ -35,8 +35,8 @@ const Login = () => {
           {/* <AlertForgotPassword /> */}
           <form className="w-64 sm:w-80" onSubmit={handleLogin}>
             <div className="flex flex-col">
-              <InputName label="Usuario" className="mb-4" />
-              <InputName label="Contraseña" type="password" />
+              <InputName label="Usuario" className="mb-4" type="text" placeholder="user" />
+              <InputName label="Contraseña" type="password" placeholder="Password" />
               <a
                 href="#"
                 className="text-orange-500 text-sm my-2 underline italic "
