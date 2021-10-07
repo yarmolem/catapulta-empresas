@@ -30,7 +30,7 @@ const DashboardVista1 = () => {
                     <div className="text-white bg-black opacity-50 absolute left-0 bottom-0 right-0 top-0">
                     </div>
                     <div>
-                        <img src={banner} className="h-30 w-full" />
+                        <img src={banner} className="md:h-48 h-30 w-full" />
                     </div>
                     <p className="text-3xl md:text-4xl  top-1/3 left-5 md:left-12 text-white absolute">
                         Bienvenid@, luis fernando
@@ -38,7 +38,7 @@ const DashboardVista1 = () => {
 
                 </div>
 
-                <div className="cards  flex flex-wrap flex-col items-center sm:flex-row justify-between  ">
+                <div className="cards  flex flex-wrap flex-col items-center mx-1 lg:mx-0 sm:flex-row justify-between  ">
                     <Card
                         icon={icon_equipo}
                         number={124}
@@ -77,7 +77,7 @@ const DashboardVista1 = () => {
                     />
 
                 </div>
-                <div className="mt-12  md:flex  mb-5">
+                <div className="mt-12  md:flex  mb-5 mx-1 md:mx-0">
                     <div className="md:w-2/3 md:mr-16">
                         <div className="relative bg-dropdown rounded-xl w-full 
                                     text-white font-bold text-base  md:text-lg 
@@ -109,62 +109,70 @@ const DashboardVista1 = () => {
 
                     </div>
                 </div>
-                <div>
-                    <DropdonwnTipo1 title="Votaciones">
-                        <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
-                            <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
-                            <p className="ml-1">Fecha</p>
-                            <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
-                            <p className="ml-1">Área</p>
-                            <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
-                            <div className="mt-5 flex justify-center">
-                                <ButtonDownload
-                                    customClass=''
-                                    text='Generar Reporte'
-                                    width="large"
-                                    color='dropdown'
-                                    border='drpdown'
-                                    outline={false}
-                                />
-                            </div>
+                <div className="mx-1 md:mx-0">
+                    <div className="mb-9">
+                        <DropdonwnTipo1 title="Votaciones">
+                            <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                                <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                                <p className="ml-1">Fecha</p>
+                                <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
+                                <p className="ml-1">Área</p>
+                                <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
+                                <div className="mt-5 flex justify-center">
+                                    <ButtonDownload
+                                        customClass=''
+                                        text='Generar Reporte'
+                                        width="large"
+                                        color='dropdown'
+                                        border='drpdown'
+                                        outline={false}
+                                    />
+                                </div>
 
-                        </div>
-                    </DropdonwnTipo1>
-                    <DropdonwnTipo1 title="Red Social">
-                        <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
-                            <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
-                            <p className="ml-1">Tipo</p>
-                            <SelectDate dateList={filterList} titleSelect="Filtrar" name="frecuencia" />
-                            <p className="ml-1">Fecha</p>
-                            <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
-                            <p className="ml-1">Área</p>
-                            <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
-                            <div className="mt-5 flex justify-center">
-                                <ButtonDownload
-                                    customClass=''
-                                    text='Generar Reporte'
-                                    width="large"
-                                    color='dropdown'
-                                    border='drpdown'
-                                    outline={false}
-                                />
                             </div>
+                        </DropdonwnTipo1>
+                    </div>
 
-                        </div>
-                    </DropdonwnTipo1>
+                    <div className="mb-9">
+
+                        <DropdonwnTipo1 title="Red Social">
+                            <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                                <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                                <p className="ml-1">Tipo</p>
+                                <SelectDate dateList={filterList} titleSelect="Filtrar" name="frecuencia" />
+                                <p className="ml-1">Fecha</p>
+                                <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
+                                <p className="ml-1">Área</p>
+                                <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
+                                <div className="mt-5 flex justify-center">
+                                    <ButtonDownload
+                                        customClass=''
+                                        text='Generar Reporte'
+                                        width="large"
+                                        color='dropdown'
+                                        border='drpdown'
+                                        outline={false}
+                                    />
+                                </div>
+
+                            </div>
+                        </DropdonwnTipo1>
+
+                    </div>
+
                     <div className="bg-dropdown rounded-xl w-full 
                                   text-white font-bold text-lg px-10 py-5">
                         Beneficios
                     </div>
-                    <div className="flex flex-col items-center justify-center mt-11">
-                        <div className="mb-8">
+                    <div className=" flex flex-col items-center justify-center mt-11">
+                        <div className="w-full lg:w-auto mb-8">
                             <CouponCards
                                 color="orange"
                                 title="Canjes"
                                 logo={logo_benefits}
                             />
                         </div>
-                        <div className="mb-10">
+                        <div className="w-full lg:w-auto mb-10">
                             <CouponCards
                                 color="orange"
                                 title="Canjes"

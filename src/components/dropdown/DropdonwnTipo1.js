@@ -6,7 +6,7 @@ const DropdonwnTipo1 = ({ title, children }) => {
         setShow(e=>!e);
     }
     return (
-        <div className="my-3 px-1">
+        <div className="">
             <div className="relative bg-dropdown rounded-xl w-full 
             text-white font-bold text-lg px-10 py-5 ">
                 {title}

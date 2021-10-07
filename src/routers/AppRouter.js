@@ -15,7 +15,7 @@ const HomeRoutes = () => {
   return (
     <Layout>
       <Switch>
-        <Route exact path="/dashboard" component={DashboardVista1} />
+        <Route exact path="/" component={DashboardVista1} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/profilePageTwo" component={ProfilePageTwo} />
         <Route exact path="/components" component={App}/>
