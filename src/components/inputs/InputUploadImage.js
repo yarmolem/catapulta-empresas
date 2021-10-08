@@ -1,52 +1,81 @@
+import { useState } from 'react'
+import iconSuma from '../../assets/imgs/iconSuma.svg'
+const InputUploadImage = ({ text = 'Area de la Empresa', button = true, icon = true, placeholder = '' }) => {
+  const [newAreaCompany, setNewAreaCompany] = useState('')
+  const updateNewAreaCompany = e => setNewAreaCompany(e.target.value)
 
-import React, { useState } from 'react'
-import ico_agregar from '../../assets/imgs/+.svg'
-const InputUploadImage = () => {
-    const [activateButton, setActivateButton] = useState(false);
-    const [showAlert,setShowAlert]=useState(false);
-    const handleClickActivate = () => {
-        setActivateButton(true);
-    }
-    const handelClickAlert=()=>{
-         setShowAlert(true);
-            setTimeout(() => setShowAlert(false), 3000);
-    
-    }
+  const createNewAreaCompany = () => {
+    console.log(newAreaCompany)
+    setNewAreaCompany('')
+  }
+
+  if (button && icon) {
     return (
-        <div className="my-3 mx-1">
-            <div>
-                <label
-                    className="text-on-warn text-lg tracking-tight font-bold "
-
-                >Imagen del Pricipio 1
-                </label>
-            </div>
-            <div className="w-full  flex ">
-                <input
-                    className="w-7/12 md:w-4/6 border border-accent text-on-warn outline-none
-                py-2 pl-4  focus:ring-2  focus:border-accent-500
-                focus:ring-2 focus:ring-accent focus:border-accent-500"
-                    name="name"
-                    type="text"
-                />
-                <button
-                    type="button"
-                    disabled={activateButton}
-                    className={`flex-1 tracking-tight px-3 ${activateButton?"bg-accent":"bg-on-warn"} 
-                    text-white text-sm bock h-5/6 p-3 mr-2`}
-                    onClick={handelClickAlert}
-                    >Subir imagen</button>
-                <img
-                    src={ico_agregar}
-                    className="cursor-pointer"
-                    onClick={handleClickActivate}
-                />
-            </div>
-           {(showAlert)&& <div className="text-center border-primary bg-primary py-4 text-white">
-                Debe de agregar la imagen para poder subirla
-            </div>}
+      <div className="mb-4">
+        <label
+          className=" text-lg tracking-tight font-bold text-on-warn"
+          htmlFor="name"
+        >{text}
+        </label>
+        <div className="flex">
+          <input
+            className=" text-on-warn w-full border border-primary  outline-none py-2 pl-4  focus:ring-2  focus:ring-2 focus:ring-accent focus:border-primary-400"
+            name="name"
+            type="text"
+            id="name"
+            placeholder={placeholder}
+          />
+          <button type="button" className="flex-0 tracking-tight px-8 rounded-none h-10.5 bg-primary text-white text-sm  ">Subir imagen</button >
+          <img
+            src={iconSuma}
+            className="cursor-pointer self-center ml-2"
+          />
         </div>
+      </div>
     )
+  } else if (button) {
+    return (
+      <div className="mb-4">
+        <label
+          className=" text-lg tracking-tight font-bold text-on-warn"
+          htmlFor="name"
+        >{text}
+        </label>
+        <div className="flex">
+          <input
+            className=" text-on-warn w-full border border-primary  outline-none py-2 pl-4  focus:ring-2  focus:ring-2 focus:ring-accent focus:border-primary-400"
+            name="name"
+            type="text"
+            id="name"
+            placeholder={placeholder}
+          />
+          <button type="button" className="flex-0 tracking-tight px-8 rounded-none h-10.5 bg-primary text-white text-sm  mr-2">Subir imagen</button >
+        </div>
+      </div>
+    )
+  } else {
+    return (
+      <div className="mb-4">
+        <label
+          className=" text-lg tracking-tight font-bold text-on-warn"
+          htmlFor="name"
+        >{text}
+        </label>
+        <div className="flex">
+          <input
+            className=" text-on-warn w-full border border-primary  outline-none py-2 pl-4  focus:ring-2  focus:ring-2 focus:ring-accent focus:border-administrator-400"
+            name="name"
+            type="text"
+            id="name"
+            placeholder={placeholder}
+            value={newAreaCompany}
+            onChange={updateNewAreaCompany}
+          />
+          <button onClick={createNewAreaCompany}> <img src={iconSuma} className="cursor-pointer self-center ml-2" /></button>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default InputUploadImage
