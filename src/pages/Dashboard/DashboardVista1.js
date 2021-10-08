@@ -80,10 +80,10 @@ const DashboardVista1 = () => {
                     />
 
                 </div>
-                <div className="mt-12  md:flex  mb-5 mx-1 md:mx-0">
+                <div className="mt-12  md:flex  mb-16 mx-1 md:mx-0">
                     <div className="md:w-2/3 md:mr-16">
-                        <div className="relative bg-dropdown rounded-xl w-full 
-                                    text-white font-bold text-base  md:text-lg 
+                        <div className="relative bg-accent rounded-xl w-full 
+                                    text-white font-bold text-xl
                                     md:px-10 px-4 text-center md:py-5 py-3 mb-9">
                             Frecuencia de ingreso a la aplicacion
                         </div>
@@ -92,12 +92,12 @@ const DashboardVista1 = () => {
 
 
                     <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
-                        <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
-                        <p className="ml-1">Frecuencia</p>
+                        <p className="text-accent text-lg font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                        <p className="ml-1 opacity-80 text-lg">Frecuencia</p>
                         <SelectDate dateList={frecuencia} titleSelect="Filtrar" name="frecuencia" />
-                        <p className="ml-1">Fecha</p>
+                        <p className="ml-1 opacity-80 text-lg">Fecha</p>
                         <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
-                        <p className="ml-1">Área</p>
+                        <p className="ml-1 opacity-80 text-lg">Área</p>
                         <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
                         <div className="mt-5 flex justify-center">
                             <ButtonDownload
@@ -115,11 +115,11 @@ const DashboardVista1 = () => {
                 <div className="mx-1 md:mx-0">
                     <div className="mb-9">
                         <DropdonwnTipo1 title="Votaciones">
-                            <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
-                                <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
-                                <p className="ml-1">Fecha</p>
+                            <div className="mx-1 md:mx-0 border border-accent px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                                <p className="text-accent text-lg  font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                                <p className="ml-1 opacity-80 text-lg">Fecha</p>
                                 <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
-                                <p className="ml-1">Área</p>
+                                <p className="ml-1 opacity-80 text-lg">Área</p>
                                 <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
                                 <div className="mt-5 flex justify-center">
                                     <ButtonDownload
@@ -139,13 +139,13 @@ const DashboardVista1 = () => {
                     <div className="mb-9">
 
                         <DropdonwnTipo1 title="Red Social">
-                            <div className="mx-1 md:mx-0 border border-dropdown px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
-                                <p className="text-dropdown font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
-                                <p className="ml-1">Tipo</p>
+                            <div className="mx-1 md:mx-0 border border-accent px-6 py-8 mt-6 md:mt-0 md:w-1/3 ">
+                                <p className="text-accent text-lg  font-bold ml-1 mb-6 ">Seleccione según su preferencia:</p>
+                                <p className="ml-1 opacity-80 text-lg">Tipo</p>
                                 <SelectDate dateList={filterList} titleSelect="Filtrar" name="frecuencia" />
-                                <p className="ml-1">Fecha</p>
+                                <p className="ml-1 opacity-80 text-lg">Fecha</p>
                                 <SelectDate dateList={filterList} titleSelect="Seleccione la fecha" name="fecha" />
-                                <p className="ml-1">Área</p>
+                                <p className="ml-1 opacity-80 text-lg">Área</p>
                                 <SelectDate dateList={filterList} titleSelect="Seleccionar área" name="fecha" />
                                 <div className="mt-5 flex justify-center">
                                     <ButtonDownload
@@ -163,21 +163,21 @@ const DashboardVista1 = () => {
 
                     </div>
 
-                    <div className="bg-dropdown rounded-xl w-full 
-                                  text-white font-bold text-lg px-10 py-5">
+                    <div className="bg-accent rounded-xl w-full 
+                                  text-white font-bold text-xl px-10 py-5">
                         Beneficios
                     </div>
                     <div className=" flex flex-col items-center justify-center mt-11">
                         <div className="w-full lg:w-auto mb-8">
                             <CouponCards
-                                color="orange"
+                                color="orange-600"
                                 title="Canjes"
                                 logo={logo_benefits}
                             />
                         </div>
                         <div className="w-full lg:w-auto mb-10">
                             <CouponCards
-                                color="orange"
+                                color="orange-600"
                                 title="Canjes"
                                 logo={logo_benefits}
                             />

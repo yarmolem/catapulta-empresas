@@ -6,7 +6,7 @@ const DropdonwnTipo2 = ({ filterList }) => {
             <select
                 name="filter"
                 className="w-full border border-accent py-2 pl-15 pr-10 rounded-md 
-             text-xl font-bold text-accent
+             text-lg font-bold text-accent
             focus:ring-2 focus:ring-accent focus:border-accent-500 ">
 
                 <option value="">

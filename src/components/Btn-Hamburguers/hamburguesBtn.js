@@ -7,7 +7,7 @@ const HamburguesBtn = ({handleClick,show}) => {
   
     return (
 
-        <button className="flex justify-center items-center bottom-1 right-2 fixed bg-orange 
+        <button className="flex justify-center items-center bottom-1 right-2 fixed bg-accent 
             rounded-full  p-2 z-50 "
             onClick={()=>handleClick()}
         >

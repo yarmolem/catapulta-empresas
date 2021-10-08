@@ -8,11 +8,11 @@ const DropdonwnTipo1 = ({ title, children }) => {
     return (
         <div className="">
             <div className="relative bg-accent rounded-xl w-full 
-            text-white font-bold text-lg px-10 py-5 ">
+            text-white font-bold text-xl px-10 py-5 ">
                 {title}
-                <img className={`absolute cursor-pointer ${show&&"transform rotate-180"} `}
+                <img className={`absolute p-3 cursor-pointer ${show&&"transform rotate-180"} `}
                     src={vector}
-                    style={{ right: "20px ", top: "20px" }}
+                    style={{ right: "20px ", top: "10px" }}
                     onClick={handleShow}
                     />
             </div>
