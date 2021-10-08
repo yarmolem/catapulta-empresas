@@ -12,6 +12,8 @@ import AwardView1 from "../pages/award management/AwardView1";
 import Administrator from "../pages/BD Admin/Administrator";
 import NewAdministrator from "../pages/BD Admin/NewAdministrator";
 import NewsManagement from "../pages/newsManagement/NewsManagement";
+import BdEmpleados from "../pages/BD Empleados/BdEmpleados";
+//import Communications from "../pages/communications/Communications";
 
 // Sistema de rutas principales
 
@@ -22,13 +24,15 @@ const HomeRoutes = () => {
         <Route exact path="/" component={DashboardVista1} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/premiaciones" component={AwardView1} />
-        <Route exact path="/administrador" component={Administrator} />
+        <Route exact path="/administrador" component={Administrator} /> 
+        <Route exact path="/empleados" component={BdEmpleados} />   
         <Route
           exact
           path="/administrador/crear-nuevo-administrador"
           component={NewAdministrator}
         />
         <Route exact path="/gestion-noticias" component={NewsManagement} />
+        {/*<Route exact path="/gestion-noticias/comunicaciones" component={Communications} />*/}
       </Switch>
     </Layout>
   );

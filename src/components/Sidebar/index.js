@@ -70,7 +70,7 @@ const Sidebar = ({ show, handleClick }) => {
 
           <li className="flex  items-center  pl-1 py-3 ">
             <Link
-              to="/components"
+              to="/empleados"
               className="flex  items-center "
               onClick={() => handleClick()}
             >

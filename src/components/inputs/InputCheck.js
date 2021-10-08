@@ -6,7 +6,7 @@ const InputCheck = ({name,id,textLabel}) => {
         setShow(e=>!e);
     }
     return (
-        <div className="mx-1 my-3">
+        <div className="border-accent border">
 
             <input
                 type="checkbox"
@@ -20,7 +20,7 @@ const InputCheck = ({name,id,textLabel}) => {
                 onClick={handleShow}
             > {textLabel}
                 <span className={`absolute flex justify-center w-6 h-6 rounded-full 
-                border-dropdown border-2 left-0 top-0 ${show&&"bg-turquoise border-none"}`
+                border-accent border-2 left-0 top-0 ${show&&"bg-accent border-none"}`
                 }> 
                {(show)&& <img className="w-2.5" src={icon_path}/>}
                 </span>
