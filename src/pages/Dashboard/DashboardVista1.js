@@ -46,37 +46,37 @@ const DashboardVista1 = () => {
                         icon={icon_equipo}
                         number={124}
                         text="Usuarios registrados"
-                        color="purple"
+                        color="pink-600"
                     />
                     <Card
                         icon={icon_users}
                         number={124}
                         text="Usuarios activos"
-                        color="brown"
+                        color="primary"
                     />
                     <Card
                         icon={icon_usersNoActives}
                         number={124}
                         text="Usuarios inactivos"
-                        color="on-warn"
+                        color="gray-100"
                     />
                     <Card
                         icon={icon_usersPhoto}
                         number={65}
                         text="Usuarios con fotos"
-                        color="orange"
+                        color="orange-600"
                     />
                     <Card
                         icon={icon_usersWithoutPhoto}
                         number={14}
                         text="Usuarios sin fotos"
-                        color="turquoise"
+                        color="warn"
                     />
                     <Card
                         icon={icon_reconocimientos}
                         number={216}
                         text="Reconocimientos"
-                        color="purple"
+                        color="pink-600"
                     />
 
                 </div>

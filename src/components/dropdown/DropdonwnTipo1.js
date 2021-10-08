@@ -7,7 +7,7 @@ const DropdonwnTipo1 = ({ title, children }) => {
     }
     return (
         <div className="">
-            <div className="relative bg-dropdown rounded-xl w-full 
+            <div className="relative bg-accent rounded-xl w-full 
             text-white font-bold text-lg px-10 py-5 ">
                 {title}
                 <img className={`absolute cursor-pointer ${show&&"transform rotate-180"} `}

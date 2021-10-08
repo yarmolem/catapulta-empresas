@@ -1,8 +1,5 @@
 // const path = require('path')
 // eslint-disable-next-line no-undef
-const process = require('process')
-// eslint-disable-next-line no-undef
-const { blueGray } = require('tailwindcss/colors')
 // eslint-disable-next-line no-undef
 const colors = require('tailwindcss/colors')
 // eslint-disable-next-line no-undef
@@ -23,24 +20,16 @@ const generatePalette = require('./src/@tailwind/utils/generate-palette')
  * Tailwind-like color palettes automatically
  */
 const customPalettes = {
-  brand: generatePalette('#0833a2')
+  brand: generatePalette('#79321B')
 }
-
-const customDropdown = {
-  red: generatePalette('#BD0C2E')
+const customPalettesDarkRed = {
+  brand: generatePalette('#BD0C2E')
 }
-
-const customTurquoise = {
-  turquoise: generatePalette('#00AEC6')
+const customPalettesTurquoise = {
+  brand: generatePalette('#00AEC6')
 }
-const customPurple = {
-  purple: generatePalette('#A5037C'),
-}
-const customBrown = {
-  brown: generatePalette('#79321B'),
-}
-const customOrange = {
-  orange: generatePalette('#FF8A00')
+const customPalettesLead = {
+  brand: generatePalette('#948E8C')
 }
 /**
  * Themes
@@ -51,34 +40,19 @@ const themes = {
     primary: {
       // ...colors.green,
       ...customPalettes.brand,
-      DEFAULT: '#F26935'
+      DEFAULT: customPalettes[600]
     },
     accent: {
-      ...colors.blueGray,
-      DEFAULT: '#79321B'
+      ...customPalettesDarkRed.brand,
+      DEFAULT: customPalettes[600]
     },
     warn: {
-      ...colors.red,
-      DEFAULT: '#FBB450'
+      ...customPalettesTurquoise.brand,
+      DEFAULT: customPalettes[600]
     },
     'on-warn': {
-      500: colors.red['50'],
-      DEFAULT: '#948E8C'
-    },
-    dropdown: {
-      ...customDropdown.red
-    },
-    turquoise: {
-      ...customTurquoise.turquoise
-    },
-    purple: {
-      ...customPurple.purple
-    },
-    brown: {
-      ...customBrown.brown
-    },
-    orange: {
-      ...customOrange.orange
+      ...customPalettesLead.brand,
+      DEFAULT: customPalettes[500]
     }
   },
   // Rest of the themes will use the 'default' as the base theme
@@ -137,12 +111,14 @@ const config = {
       },
       red: {
         ...colors.red,
-        400:'rgba(254, 7, 19, 0.1)',
-        500:'#FE0713',
-          },
+        400: 'rgba(254, 7, 19, 0.1)',
+        500: '#FE0713',
+        700: '#79321B',
+      },
       orange: {
         ...colors.orange,
         500: '#FBB450',
+        600:'#FF8A00',
         700: '#F26935'
       },
       amber: colors.amber,
@@ -155,7 +131,10 @@ const config = {
         // 900: '#035E4D'
       },
       teal: colors.teal,
-      blue: colors.blue,
+      blue: {
+        ...colors.blue,
+        500: "#0833a2",
+      },
       indigo: colors.indigo,
       purple: colors.purple
     },
