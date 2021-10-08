@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "../../components/headerTitle/Title";
+import Title from "../../../components/headerTitle/Title";
 import IconSearch from "../../assets/imgs/iconSearch.svg";
-import { ButtonDownload } from "../../components/Button";
+import { ButtonDownload } from "../../../components/Button";
 
 const Communications = () => {
   const handleNewAdmin = (e) => {
