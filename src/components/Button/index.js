@@ -15,13 +15,13 @@ export const ButtonDownload = ({ type = 'button', text = 'Descargar', width = 's
   if (width === 'small') {
     if (outline === true) {
       return (
-        <button type={type} className={` text-${color}-500  px-6 py-2 bg-transparent  rounded-md text-center border-${border} border-${color}-500 font-semibold text-base `} value={text} >
+        <button type={type} className={` text-${color}-500  px-6 py-2 bg-transparent w-full rounded-md text-center border-${border} border-${color}-500 font-semibold text-base `} value={text} >
           {text}
         </button>
       )
     } else {
       return (
-        <button type={type} className={` bg-${color}-500 px-6 py-2 text-white  rounded-md text-center border-${border} border-${color}-500  font-medium text-base  `} value={text} >
+        <button type={type} className={` bg-${color}-500 px-6 py-2 text-white w-full rounded-md text-center border-${border} border-${color}-500  font-medium text-base  `} value={text} >
           {text}
         </button>
       )
@@ -30,13 +30,13 @@ export const ButtonDownload = ({ type = 'button', text = 'Descargar', width = 's
     if (border === !'') {
       if (outline === true) {
         return (
-          <button type={type} className={`  text-${color}  px-9 py-1 tracking-widest bg-transparent rounded-md text-center border border-${color} font-semibold text-md  `} value={text} >
+          <button type={type} className={`  text-${color}  px-9 py-1 tracking-widest w-full bg-transparent rounded-md text-center border border-${color} font-semibold text-md  `} value={text} >
             {text}
           </button>
         )
       } else {
         return (
-          <button type={type} className={` bg-${color} px-9 py-1 tracking-widest text-white  rounded-md text-center border border-${color}  font-semibold text-md  `} value={text} >
+          <button type={type} className={` bg-${color} px-9 py-1 tracking-widest w-full text-white  rounded-md text-center border border-${color}  font-semibold text-md  `} value={text} >
             {text}
           </button>
         )
@@ -44,13 +44,13 @@ export const ButtonDownload = ({ type = 'button', text = 'Descargar', width = 's
     } else {
       if (outline === true) {
         return (
-          <button type={type} className={`  text-${color}  px-9 py-1 tracking-widest bg-transparent rounded-md text-center border${border} border-${color} font-semibold text-md  `} value={text} >
+          <button type={type} className={`  text-${color}  px-9 py-1 tracking-widest bg-transparent w-full rounded-md text-center border${border} border-${color} font-semibold text-md  `} value={text} >
             {text}
           </button>
         )
       } else {
         return (
-          <button type={type} className={` bg-${color} px-9 py-1 tracking-widest text-white  rounded-md text-center border${border} border-${color}  font-semibold text-md  `} value={text} >
+          <button type={type} className={` bg-${color} px-9 py-1 tracking-widest text-white  rounded-md w-full text-center border${border} border-${color}  font-semibold text-md  `} value={text} >
             {text}
           </button>
         )

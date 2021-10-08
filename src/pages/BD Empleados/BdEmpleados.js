@@ -19,7 +19,7 @@ const BdEmpleados = () => {
             <div className="px-6 sm:px-10 pb-8">
                 <div className="flex flex-col gap-y-6">
                     <form onSubmit={handleNewAdmin}>
-                        <div className="relative flex flex-col sm:justify-center sm:flex-row gap-6 ">
+                        <div className="relative flex flex-col  sm:flex-row gap-6  ">
                             <img className="absolute left-3 top-3" src={IconSearch} alt="" />
                             <input
                                 className=" w-full   text-on-warn-300 font-semibold border-2 border-on-warn-300 
@@ -30,7 +30,7 @@ const BdEmpleados = () => {
                                 id="name"
                                 placeholder="Buscar por número de DNI o Área"
                             />
-                            <div className="min-w-44">
+                            <div className="min-w-40  flex justify-end ">
                                 <ButtonDownload
                                     text="CREAR NUEVO"
                                     color="primary"
