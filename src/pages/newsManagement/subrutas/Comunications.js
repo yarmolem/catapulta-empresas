@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../../components/headerTitle/Title";
-import IconSearch from "../../assets/imgs/iconSearch.svg";
+import IconSearch from "../../../assets/imgs/iconSearch.svg";
 import { ButtonDownload } from "../../../components/Button";
 
 const Communications = () => {
