@@ -41,7 +41,8 @@ const DashboardVista1 = () => {
 
                 </div>
 
-                <div className="cards items-stretch  flex flex-wrap flex-col items-center mx-1 lg:mx-0 sm:flex-row justify-between  ">
+                <div className="cards sm:items-stretch  flex flex-wrap flex-col items-center 
+                mx-1 lg:mx-0 sm:flex-row sm:justify-between  ">
                     <Card
                         icon={icon_equipo}
                         number={124}
