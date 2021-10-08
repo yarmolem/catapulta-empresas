@@ -13,6 +13,9 @@ import Administrator from "../pages/BD Admin/Administrator";
 import NewAdministrator from "../pages/BD Admin/NewAdministrator";
 import NewsManagement from "../pages/newsManagement/NewsManagement";
 import BdEmpleados from "../pages/BD Empleados/BdEmpleados";
+import Communications from "../pages/newsManagement/subrutas/Comunications";
+import Novedades from "../pages/newsManagement/subrutas/Novedades";
+import newNovedad from "../pages/newsManagement/subrutas/newNovedad";
 //import Communications from "../pages/communications/Communications";
 
 // Sistema de rutas principales
@@ -32,6 +35,10 @@ const HomeRoutes = () => {
           component={NewAdministrator}
         />
         <Route exact path="/gestion-noticias" component={NewsManagement} />
+        <Route exact path="/gestion-noticias/comunicaciones" component={Communications} /> 
+       {/* <Route exact path="/gestion-noticias/comunicaciones/nueva-comunicacion" component={newCommunication} /> */}
+        <Route exact path="/gestion-noticias/novedades" component={Novedades} /> 
+        <Route exact path="/gestion-noticias/novedades/nueva-novedad" component={newNovedad} />
         {/*<Route exact path="/gestion-noticias/comunicaciones" component={Communications} />*/}
       </Switch>
     </Layout>
