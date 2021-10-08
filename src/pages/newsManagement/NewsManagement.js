@@ -7,14 +7,15 @@ const NewsManagement = () => {
   return (
     <div className=" w-full">
       <Title color="gray-100" title="GESTION DE NOTICIAS" />
-      <div className=" px-3 md:px-0 flex flex-col md:flex-row justify-between md:mx-28 gap-y-10 md:gap-y-0">
-        <div>
-          <img src={ImgComunicaciones} />
-          <p>Comunicaciones</p>
+      <div className="px-3 md:px-0 flex flex-col sm:flex-row justify-center sm:gap-16 md:gap-24 md:mx-28 gap-y-10 md:gap-y-0">
+        <div className="cursor-pointer py-4 px-10 shadow-lg flex flex-col justify-center">
+          <img 
+          src={ImgComunicaciones} />
+          <p className="text-3xl font-black text-center text-orange-600 mt-6">Comunicaciones</p>
         </div>
-        <div>
+        <div className="cursor-pointer py-4 px-10 shadow-lg flex flex-col justify-center">
           <img src={ImgNovedades} alt="" />
-          <p>Novedades</p>
+          <p className="text-3xl font-black text-center text-orange-600 mt-6">Novedades</p>
         </div>
       </div>
     </div>
