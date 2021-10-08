@@ -71,7 +71,7 @@ const history = useHistory();
                       20154963
                     </td>
                     <td className="px-4 py-3 ">Recursos Humanos</td>
-                    <td className="px-4 py-">
+                    <td className="px-4 py-3">
                       <ButtonDownload color="primary" text="Ver Perfil" width="large" />
                     </td>
                   </tr>
