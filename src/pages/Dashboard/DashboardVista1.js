@@ -176,7 +176,7 @@ const DashboardVista1 = () => {
                                 logo={logo_benefits}
                             />
                         </div>
-                        <div className="w-full lg:w-auto mb-10">
+                        <div className="w-full lg:w-auto mb-10 ">
                             <CouponCards
                                 color="orange-600"
                                 title="Canjes"

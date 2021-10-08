@@ -24,12 +24,16 @@ const history = useHistory();
               id="name"
               placeholder="Buscar por número de DNI o Área"
             />
+            <div className="min-w-44">
             <ButtonDownload
               text="CREAR NUEVO"
               color="primary"
               width="small"
               type="submit"
             />
+            </div>
+
+            
           </div>
         </form>
 

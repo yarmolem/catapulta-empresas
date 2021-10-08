@@ -9,6 +9,7 @@ const CouponCards = ({ color, logo, title }) => {
                 <img src={logo} />
                 <p className="text-gray-200 text-base ml-6">{title}</p>
             </div>
+            <div className="w-32">
             <ButtonDownload
                 customClass=''
                 text='Descargar'
@@ -17,6 +18,8 @@ const CouponCards = ({ color, logo, title }) => {
                 border=''
                 outline={false}
             />
+            </div>
+            
         </div>
     )
 }
