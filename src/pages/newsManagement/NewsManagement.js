@@ -10,9 +10,11 @@ const NewsManagement = () => {
       <div className=" px-3 md:px-0 flex flex-col md:flex-row justify-between md:mx-28 gap-y-10 md:gap-y-0">
         <div>
           <img src={ImgComunicaciones} />
+          <p>Comunicaciones</p>
         </div>
         <div>
           <img src={ImgNovedades} alt="" />
+          <p>Novedades</p>
         </div>
       </div>
     </div>
