@@ -1,13 +1,11 @@
+import Sidebar from "../../components/Sidebar";
 
-import Sidebar from '../../components/Sidebar'
-
-const Dashboard = ({ placeholder = 'hola' }) => {
+const Dashboard = ({ placeholder = "hola" }) => {
   return (
     <div className="">
       <Sidebar />
+    </div>
+  );
+};
 
-    </div >
-  )
-}
-
-export default Dashboard
+export default Dashboard;
