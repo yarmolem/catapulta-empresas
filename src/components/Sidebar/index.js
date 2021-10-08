@@ -57,7 +57,7 @@ const Sidebar = ({ show, handleClick }) => {
           </li>
 
           <li className="flex  items-center  pl-1 py-3 ">
-            <Link to='/profile'
+            <Link to='/administrador'
               className="flex  items-center "
               onClick={() => handleClick()}>
               <img className="" src={iconBd}></img>

@@ -1,20 +1,38 @@
+import { useHistory } from 'react-router'
 import IconSearch from '../../assets/imgs/iconSearch.svg'
 import { ButtonDownload, ButtonOffice } from '../../components/Button/index'
 const Administrator = () => {
+const history = useHistory();
+
+  const handleNewAdmin = ( e ) => {
+    e.preventDefault()
+    history.push('/administrador/crear-nuevo-administrador');
+  }
+
+
   return (
     <div className="px-6 sm:px-10 py-8">
       <div className="flex flex-col gap-y-6">
-        <div className="relative flex flex-col sm:flex-row gap-6">
-          <img className="absolute left-3 top-3" src={IconSearch} alt="" />
-          <input
-            className="  w-full text-on-warn-300 font-semibold border-2 border-on-warn-300 rounded-lg  outline-none py-2 pl-10  focus:ring-2  focus:ring-2 focus:ring-on-warn-400 focus:border-on-warn-400"
-            name="name"
-            type="text"
-            id="name"
-            placeholder="Buscar por número de DNI o Área"
-          />
-          <ButtonDownload text="CREAR NUEVO" color="primary" width="small" />
-        </div>
+        <form onSubmit={handleNewAdmin}>
+          <div className="relative flex flex-col sm:flex-row gap-6">
+            <img className="absolute left-3 top-3" src={IconSearch} alt="" />
+            <input
+              className="  w-full text-on-warn-300 font-semibold border-2 border-on-warn-300 rounded-lg  outline-none 
+            py-2 pl-10  focus:ring-2  focus:ring-2 focus:ring-on-warn-400 focus:border-on-warn-400"
+              name="name"
+              type="text"
+              id="name"
+              placeholder="Buscar por número de DNI o Área"
+            />
+            <ButtonDownload
+              text="CREAR NUEVO"
+              color="primary"
+              width="small"
+              type="submit"
+            />
+          </div>
+        </form>
+
         <select className="border h-12 self-center w-40 px-6 border-primary text-lg text-primary font-bold" value="Filtrar">
           <option className="font-bold text-center" disabled>Filtrar</option>
           <option >Adm. Nuevos</option>

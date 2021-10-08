@@ -7,8 +7,11 @@ import Profile from '../pages/profile/Profile'
 import { AuthContext } from '../context/auth/AuthState'
 //import ProfilePageTwo from '../pages/profile/ProfilePageTwo'
 import DashboardVista1 from '../pages/Dashboard/DashboardVista1'
-import App from '../App'
+//import App from '../App'
 import AwardView1 from '../pages/award management/AwardView1'
+import Administrator from '../pages/BD Admin/Administrator'
+import NewAdministrator from '../pages/BD Admin/NewAdministrator'
+
 
 // Sistema de rutas principales
 
@@ -19,7 +22,8 @@ const HomeRoutes = () => {
         <Route exact path="/" component={DashboardVista1} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/premiaciones" component={AwardView1} />
-        <Route exact path="/components" component={App}/>
+        <Route exact path="/administrador" component={Administrator}/>
+        <Route exact path="/administrador/crear-nuevo-administrador" component={NewAdministrator}/>
       </Switch>
     </Layout>
   )
